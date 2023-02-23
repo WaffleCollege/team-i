@@ -1,0 +1,53 @@
+body {
+    background-color: #bfccff;
+}
+
+header img{
+    position:absolute;
+    width: 185px;
+    height: 93px;
+    left: 20px;
+    top: 13px;    
+}
+
+.apptop img{
+    /* アプリロゴ */
+    text-align: center;
+    width: 70%;
+    height: 299px;
+    left: 342px;
+    top: 79px;
+}
+
+.apptop p{
+    width: 326px;
+    height: 22px;
+    left: 476px;
+    top: 416px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.choice-container {
+    margin: 10px 100px;
+}
+
+.choice {
+    width:20%;
+    height: 149px;
+}
+
+.footimg img{
+    position: absolute;
+    width: 1278px;
+    height: 103.03px;   
+}
