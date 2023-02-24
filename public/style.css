@@ -38,20 +38,20 @@ header {
     color: #000000;
 }
 
-.choices {
+.choice {
     width: 100%;
     height: auto;
     margin: 0 auto;
 }
 
-.choice {
+.choice-item {
     width:20%;
     float: left;
     text-align: center;
     opacity: 0.8;
 }
 
-.foot-img img{
+.footer-img img{
     width: 50%;
     float: left;
     display: flex;
