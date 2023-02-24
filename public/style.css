@@ -18,43 +18,35 @@ header {
     top: 13px;    
 }
 
-.apptop {
-    width: 1170px;
-    margin:0 auto;
+/* .apptop {
+    width: 100%;
+    margin: 0 auto;
     height: auto;
-}
+} */
 
 /* アプリロゴ */
-.main-icon img{
+.apptop img{
     width: 50%;
-    height: auto;
+    height:auto;
     text-align: center;
-    left: 342px;
-    /* top: 79px; */
+    margin: 0 25%;
 }
 
 .apptop p{
-    text-align: center;
-    /* width: 326px; */
-    /* height: 22px;
-    left: 476px;
-    top: 416px; */
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
+    margin-bottom: 50px;
     text-align: center;
 
     color: #000000;
 }
 
 .choices {
-    width: 1170px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -62,9 +54,11 @@ header {
     width:20%;
     float: left;
     text-align: center;
+    opacity: 0.9;
 }
 
 footer {
-    width: 1170px;
-    margin: 0 auto; 
+    width: 100%;
+    height: auto;
+    margin: 0;
 }
