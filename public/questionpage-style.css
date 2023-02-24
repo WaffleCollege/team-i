@@ -18,15 +18,10 @@
     float: left;
 }
 
-/* .choice-item img{
-
-} */
-
 .choice-item p{
     position: absolute;
     top: 38%;
     width: 100%;
     color: white;
-    font-weight: bold;
 }
 
