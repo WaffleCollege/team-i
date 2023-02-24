@@ -10,18 +10,12 @@ header {
     height: 65px;
 }
 
-.logo {
+/* .logo {
     position:absolute;
     width: 185px;
     height: 93px;
     left: 20px;
     top: 13px;    
-}
-
-/* .apptop {
-    width: 100%;
-    margin: 0 auto;
-    height: auto;
 } */
 
 /* アプリロゴ */
@@ -54,11 +48,11 @@ header {
     width:20%;
     float: left;
     text-align: center;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
-footer {
-    width: 100%;
-    height: auto;
-    margin: 0;
+.foot-img img{
+    width: 50%;
+    float: left;
+    display: flex;
 }
