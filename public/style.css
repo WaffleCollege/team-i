@@ -1,8 +1,16 @@
+/*背景色指定*/
 body {
     background-color: #bfccff;
+    margin: 0;
+    width: 100%;
 }
 
-header img{
+header {
+    width: 100%;
+    height: 65px;
+}
+
+.logo {
     position:absolute;
     width: 185px;
     height: 93px;
@@ -10,20 +18,27 @@ header img{
     top: 13px;    
 }
 
-.apptop img{
-    /* アプリロゴ */
+.apptop {
+    width: 1170px;
+    margin:0 auto;
+    height: auto;
+}
+
+/* アプリロゴ */
+.main-icon {
+    width: 50%;
+    height: auto;
     text-align: center;
-    width: 70%;
-    height: 299px;
     left: 342px;
-    top: 79px;
+    /* top: 79px; */
 }
 
 .apptop p{
-    width: 326px;
-    height: 22px;
+    text-align: center;
+    /* width: 326px; */
+    /* height: 22px;
     left: 476px;
-    top: 416px;
+    top: 416px; */
 
     font-family: 'Inter';
     font-style: normal;
@@ -37,17 +52,19 @@ header img{
     color: #000000;
 }
 
-.choice-container {
-    margin: 10px 100px;
+.choices {
+    width: 1170px;
+    height: 200px;
+    margin: 0 auto;
 }
 
 .choice {
     width:20%;
-    height: 149px;
+    float: left;
+    text-align: center;
 }
 
-.footimg img{
-    position: absolute;
-    width: 1278px;
-    height: 103.03px;   
+footer {
+    width: 1170px;
+    margin: 0 auto; 
 }
