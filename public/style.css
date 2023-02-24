@@ -25,7 +25,7 @@ header {
 }
 
 /* アプリロゴ */
-.main-icon {
+.main-icon img{
     width: 50%;
     height: auto;
     text-align: center;
