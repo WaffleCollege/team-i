@@ -7,51 +7,20 @@ body {
 
 header {
     width: 100%;
-    height: 65px;
+    height: 93px;
 }
 
-/* .logo {
+/*logoはstartpage.html以外に表示されるもの。*/
+.logo {
     position:absolute;
     width: 185px;
     height: 93px;
     left: 20px;
     top: 13px;    
-} */
-
-/* アプリロゴ */
-.apptop img{
-    width: 50%;
-    height:auto;
-    text-align: center;
-    margin: 0 25%;
 }
 
-.apptop p{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 50px;
-    text-align: center;
 
-    color: #000000;
-}
-
-.choices {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-.choice {
-    width:20%;
-    float: left;
-    text-align: center;
-    opacity: 0.8;
-}
-
-.foot-img img{
+.footer-img img{
     width: 50%;
     float: left;
     display: flex;

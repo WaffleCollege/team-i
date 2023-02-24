@@ -1,0 +1,51 @@
+/*背景色指定*/
+body {
+    background-color: #bfccff;
+    margin: 0;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 65px;
+}
+
+
+/* アプリロゴ */
+.apptop img{
+    width: 50%;
+    height:auto;
+    text-align: center;
+    margin: 0 25%;
+}
+
+.apptop p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 50px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.choice {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.choice-item {
+    width:20%;
+    float: left;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.footer-img img{
+    width: 50%;
+    float: left;
+    display: flex;
+}
