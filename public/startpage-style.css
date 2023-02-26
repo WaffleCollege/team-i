@@ -23,14 +23,15 @@ header {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 30px;
     margin-bottom: 50px;
     text-align: center;
 
     color: #000000;
 }
 
+/*５つの選択肢*/
 .choice {
     width: 100%;
     height: auto;
@@ -42,10 +43,38 @@ header {
     float: left;
     text-align: center;
     opacity: 0.8;
+    line-height: 10px;
 }
 
+/*地面の雪画像*/
 .footer-img img{
     width: 50%;
     float: left;
     display: flex;
+}
+
+/*モーダル*/
+#modal {
+    display: none;
+}
+
+.modaal-container {
+    max-width: 80%;
+    background-color: #bfccff;
+}
+
+#explain {
+    float: left;
+    display: flex;
+    padding: 5% 10% 10% 10%;
+}
+
+#snowman-img img{
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+/*リンクの色*/
+a {
+    color:#000000;
 }
