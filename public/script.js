@@ -1,4 +1,5 @@
 //jQuery用
+//startpageモーダル
 var access = $.cookie('access')
 if(!access){
     flag = true;
@@ -16,4 +17,16 @@ $('.modal-open').modaal({
     after_close:function(){
         $('html').css('overflow-y', 'scroll');
     }
+});
+
+//reccomendpageカーソルあわせ//うまく作動しない。
+$(function(){
+    $('.card-img-top').hover(
+        function(){
+            $('.card-img-top').css('opacity', '0.5' )
+        },
+        function(){
+            $('.card-img-top').css('opacity', '1' )       
+        }
+    )
 });
