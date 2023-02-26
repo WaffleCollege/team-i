@@ -1,0 +1,48 @@
+.answer {
+    height: 150px;
+}
+
+.answer-text h1{
+    text-align: center;
+    font-size: 48px;
+    margin-top: 1%;
+}
+
+.row {
+    margin: 0 auto;
+    width: 85%;
+    height: auto;
+}
+
+.card {
+    background-color: #7C73E6;
+    opacity: 0.82;
+    border-radius: 30px;
+}
+
+.card-img-overlay a{
+    position: absolute;
+    bottom: 30%;
+    right: 5px;
+    color:#7C73E6; 
+    background-color: white;
+}
+
+.card img{
+    height:70%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    position: relative;
+}
+
+.card-body {
+    color: white;
+}
+
+.card-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+}
