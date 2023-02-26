@@ -18,24 +18,28 @@
     background-color: #7C73E6;
     opacity: 0.82;
     border-radius: 30px;
-}
-
-.card-img-overlay a{
-    position: absolute;
-    bottom: 30%;
-    right: 5px;
-    color:#7C73E6; 
-    background-color: white;
+    height:350px;
+    position: relative;
 }
 
 .card img{
-    height:70%;
+    height: 70%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    position: relative;
 }
+
+.card a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 30px;
+}
+
 
 .card-body {
     color: white;
