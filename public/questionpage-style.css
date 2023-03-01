@@ -14,22 +14,26 @@ body {
 
 .choice {
     text-align: center;
+    margin: 0 auto;
 }
 
-.choice-item {
-    position: relative;
-    width: 25%;
-    float: left;
-}
-
-.choice-item:hover {
-    opacity: 0.5;
-}
-
-.choice-item p{
-    position: absolute;
-    top: 38%;
-    width: 100%;
+.btn{
+    text-align: center;
+    width: 20%;
+    height: 230px;
     color: white;
+     /*コレ*/display: flex;
+     float:left;
+    /*コレ*/justify-content: center;
+    /*コレ*/align-items: center;
+    opacity: 0.8;
+    background-color: #7C73E6;
+    border-radius: 4px;
+    margin: 10px 2.5%;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 1;
 }
 

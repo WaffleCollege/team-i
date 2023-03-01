@@ -48,7 +48,7 @@ header {
 }
 
 .choice-item:hover {
-    opacity: 0.5;
+    opacity: 1;
 }
 
 /*地面の雪画像*/
