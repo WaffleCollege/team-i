@@ -46,6 +46,10 @@ header {
     line-height: 10px;
 }
 
+.choice-item:hover {
+    opacity: 0.5;
+}
+
 /*地面の雪画像*/
 .footer-img img{
     width: 50%;

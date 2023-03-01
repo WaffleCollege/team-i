@@ -19,14 +19,14 @@ $('.modal-open').modaal({
     }
 });
 
-//reccomendpageカーソルあわせ//うまく作動しない。
-$(function(){
-    $('.card-img-top').hover(
-        function(){
-            $('.card-img-top').css('opacity', '0.5' )
-        },
-        function(){
-            $('.card-img-top').css('opacity', '1' )       
-        }
-    )
-});
+// //reccomendpageカーソルあわせ//うまく作動しない。-> hoverアニメーションはcssで対応。
+// $(function(){
+//     $('.card-img-top').hover(
+//         function(){
+//             $('.card-img-top').css('opacity', '0.5' )
+//         },
+//         function(){
+//             $('.card-img-top').css('opacity', '1' )       
+//         }
+//     )
+// });

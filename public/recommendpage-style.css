@@ -50,3 +50,7 @@
     font-style: normal;
     font-weight: bold;
 }
+
+.card:hover {
+    opacity: 0.5;
+}

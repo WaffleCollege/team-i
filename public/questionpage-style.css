@@ -18,6 +18,10 @@
     float: left;
 }
 
+.choice-item:hover {
+    opacity: 0.5;
+}
+
 .choice-item p{
     position: absolute;
     top: 38%;
