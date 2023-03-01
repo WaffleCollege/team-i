@@ -1,7 +1,3 @@
-body {
-    font-weight:bold;
-}
-
 .answer {
     height: 150px;
 }
@@ -9,6 +5,7 @@ body {
 .answer-text h1{
     text-align: center;
     font-size: 48px;
+    font-weight: bold;
     margin-top: 1%;
 }
 
