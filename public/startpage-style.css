@@ -3,6 +3,7 @@ body {
     background-color: #bfccff;
     margin: 0;
     width: 100%;
+    font-weight:bold;
 }
 
 header {
@@ -55,6 +56,11 @@ header {
     width: 50%;
     float: left;
     display: flex;
+}
+
+.footer-img {
+    position: absolute;
+    bottom: 0;
 }
 
 /*モーダル*/
