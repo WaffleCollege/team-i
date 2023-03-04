@@ -1,0 +1,39 @@
+body {
+    font-weight:bold;
+}
+
+.question {
+    height: 700px;
+    text-align: center;
+}
+
+.question-text {
+    height: 400px;
+    font-size: 32px;
+}
+
+.choice {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btn{
+    text-align: center;
+    width: 20%;
+    height: 230px;
+    color: white;
+     /*コレ*/display: flex;
+     float:left;
+    /*コレ*/justify-content: center;
+    /*コレ*/align-items: center;
+    opacity: 0.8;
+    background-color: #7C73E6;
+    border-radius: 4px;
+    margin: 10px 2.5%;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
