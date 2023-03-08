@@ -1,4 +1,5 @@
 //jQuery用
+
 //startpageモーダル
 var access = $.cookie('access')
 if(!access){
@@ -19,14 +20,14 @@ $('.modal-open').modaal({
     }
 });
 
-// //reccomendpageカーソルあわせ//うまく作動しない。-> hoverアニメーションはcssで対応。
-// $(function(){
-//     $('.card-img-top').hover(
-//         function(){
-//             $('.card-img-top').css('opacity', '0.5' )
-//         },
-//         function(){
-//             $('.card-img-top').css('opacity', '1' )       
-//         }
-//     )
+//mainモーダル（ログイン・新規登録）
+// $(function() {
+    $('#login-show').click(function() {
+      $('#login-modal').fadeIn();
+    });
+    
+    $('#signup-show').click(function(){
+      $('#signup-modal').fadeIn();
+    })
 // });
+  

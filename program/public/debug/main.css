@@ -1,0 +1,30 @@
+body {
+    font-weight:bold;
+}
+
+.theme {
+    height: 600px;
+    text-align: center;
+}
+
+.theme-text {
+    height: 200px;
+    font-size: 32px;
+}
+
+
+.footer-img {
+    position: relative;
+}
+
+.footer-img img{
+    background-attachment: fixed;
+    bottom: 0;
+}
+
+#snowman-img{
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    /* background-attachment: fixed; */
+}
