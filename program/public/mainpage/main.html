@@ -7,35 +7,68 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content="#bfccff">
 
-  <!--サイトのタイトル・説明-->
-  <title>Bunjo-pro</title>
-  <meta name="description" content="文系女子大生向けのプログラミング学習お助けアプリです。" />
+    <!--サイトのタイトル・説明-->
+    <title>Bunjo-pro</title>
+    <meta name="description" content="文系女子大生向けのプログラミング学習お助けアプリです。" />  
 
   <!--外部ファイル読み込み-->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css"> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="startpage-style.css">
 </head>
 
 <body>
   <header>
-    <div class="signin" id="signin">新規登録</div>
-    <div class="login" id="login">ログイン</div>
+    <div class="header-right">
+      <div class="login" id="login-show">ログイン</div>
+      <div class="signup" id="signup-show">新規登録</div>
+
+    </div>
   </header>
+  <div class="signup-modal-wrapper" id="signup-modal">
+    <div class="modal">
+      <div id="signup-form">
+        <h2>Emailで新規登録</h2>
+        <form action="#">
+          <input class="form-control" type="text" placeholder="メールアドレス">
+          <input class="form-control" type="password" placeholder="パスワード">
+          <div id="submit-btn">新規登録</div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="login-modal-wrapper" id="login-modal">
+    <div class="modal">
+      <div id="login-form">
+        <h2>Emailログイン</h2>
+        <form action="#">
+          <input class="form-control" type="text" placeholder="メールアドレス">
+          <input class="form-control" type="password" placeholder="パスワード">
+          <div id="submit-btn">ログイン</div>
+        </form>
+      </div>
+    </div>
+  </div>
   <div class="apptop">
-      <img src="/public/img/bunjopro-logo.png">
+      <img src="../img/bunjopro-logo.png">
   </div>
   <div class="menu">
-    <h3>①　はじめてのプログラミング体験</h3>
-    <h3>②　プログラミングのロードマップ</h3>
+    <h3><a href="../debug/main.html">①　はじめてのプログラミング体験</a></h3>
+    <h3><a href="../roadmap/startpage/startpage.html">②　プログラミングのロードマップ</a></h3>
+  </div>
+  <div id="snowman-img">
+    <img src="../img/snowman.png">
   </div>
 
+  <footer>
+    <div class="footer-img">
+        <img src="../img/snowland.png">
+        <img src="../img/snowland.png">
+    </div>
+  </footer>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="../script.js"></script>
 </body>
-
-<footer>
-  <div class="footer-img">
-      <img src="/public/img/snowland.png">
-      <img src="/public/img/snowland.png">
-  </div>
-</footer>
 
 </html>
