@@ -1,6 +1,5 @@
 body {
     font-weight:bold;
-    height: 
 }
 
 header{
@@ -36,8 +35,8 @@ header{
     margin: 50px auto;
 }
 
-.menu-item h3{
-    margin: 20px auto;
+.item h3{
+    margin: 0 auto;
     text-align: center;
     padding: 30px 20px;
     background-color: #7C73E6;
@@ -45,6 +44,11 @@ header{
     width:40%;
     font-weight: normal;
     color: white;
+}
+
+.arrow{
+    height: 40px;
+    width: auto;
 }
 
 .start {
@@ -57,7 +61,7 @@ header{
     width:40%;
 }
 
-.menu img{
+#gettag{
     position: absolute;
     bottom: 50px;
     left: 10px;
@@ -72,6 +76,3 @@ header{
     width: 20%;
 }
 
-/* .footer-img{
-    position: relative;
-} */
