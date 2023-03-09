@@ -60,3 +60,17 @@ footer{
     position: absolute;
     bottom: 0px;
 }
+
+/*ナビバー*/
+.dropdown{
+    float:right;
+    margin-right: 10px;
+}
+
+.dropdown-toggle{
+    background-color: #7C73E6;
+    color: white;
+    border-radius: 34px;
+    border-color: #7C73E6;
+    padding: 20px;
+}

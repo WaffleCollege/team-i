@@ -16,8 +16,27 @@
 <body>
     <header>
         <div class="identity">
-            <a href="../startpage/startpage.html"><img class="logo" src="../img/bunjopro-logo.png"></a>
+            <a href="../mainpage/main.html"><img class="logo" src="../img/bunjopro-logo.png"></a>
         </div>
+        <!--userアイコンいれるなら、ここにコードかき、さらにdiv classで囲って、cssのdropdownクラスのfloat:right;を新しく囲ったclassに対して指定する-->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              進捗をみる
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">1. はじめに</a></li>
+              <li><a class="dropdown-item" href="#">2. Glitchの登録</a></li>
+              <li><a class="dropdown-item" href="#">3. Progate HTML/CSS初級編に挑戦</a></li>
+              <li><a class="dropdown-item" href="#">4. デバッグで作品を完成させる</a></li>
+              <li><a class="dropdown-item" href="#">5. デバッグの準備</a></li>
+              <li><a class="dropdown-item" href="#">6. タイトルのデバッグ</a></li>
+              <li><a class="dropdown-item" href="#">7. リストのデバッグ</a></li>
+              <li><a class="dropdown-item" href="#">8. 文字の大きさのデバッグ</a></li>
+              <li><a class="dropdown-item" href="#"></a></li>
+
+            </ul>
+          </div>
+
     </header>
     <h1>テーマ</h1>
     <div class="main-container">
@@ -35,11 +54,11 @@
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                       ヒント
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         ヒントかく
                     </div>
