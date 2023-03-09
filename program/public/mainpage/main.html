@@ -12,43 +12,40 @@
     <meta name="description" content="文系女子大生向けのプログラミング学習お助けアプリです。" />  
 
   <!--外部ファイル読み込み-->
-  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css"> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
   <header>
-    <div class="header-right">
-      <div class="login" id="login-show">ログイン</div>
-      <div class="signup" id="signup-show">新規登録</div>
-
-    </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      ログイン＆新規登録
+    </button>
   </header>
-  <div class="signup-modal-wrapper" id="signup-modal">
-    <div class="modal">
-      <div id="signup-form">
-        <h2>Emailで新規登録</h2>
-        <form action="#">
-          <input class="form-control" type="text" placeholder="メールアドレス">
-          <input class="form-control" type="password" placeholder="パスワード">
-          <div id="submit-btn">新規登録</div>
-        </form>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Emailでログイン</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form">
+            <form action="#">
+              <input class="form-control" type="text" placeholder="メールアドレス">
+              <input class="form-control" type="password" placeholder="パスワード">
+            </form>
+          </div>
+          <div class="submit">
+            <button id="submit-btn">ログイン</button>
+          </div>
+          <a href="...">新規登録はこちら</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="login-modal-wrapper" id="login-modal">
-    <div class="modal">
-      <div id="login-form">
-        <h2>Emailログイン</h2>
-        <form action="#">
-          <input class="form-control" type="text" placeholder="メールアドレス">
-          <input class="form-control" type="password" placeholder="パスワード">
-          <div id="submit-btn">ログイン</div>
-        </form>
-      </div>
-    </div>
-  </div>
+</div>
   <div class="apptop">
       <img src="../img/bunjopro-logo.png">
   </div>
@@ -66,8 +63,7 @@
         <img src="../img/snowland.png">
     </div>
   </footer>
-  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><!--bootstrap用jsCDN-->
   <script type="text/javascript" src="../script.js"></script>
 </body>
 

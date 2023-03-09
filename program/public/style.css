@@ -21,9 +21,13 @@ header {
     top: 13px;    
 }
 
-
 .footer-img img{
     width: 50%;
     float: left;
     display: flex;
 }
+
+footer{
+    position: absolute;
+    bottom: 0px;
+}/*あとから追加したため、他のページに悪影響でていないかチェック*/
