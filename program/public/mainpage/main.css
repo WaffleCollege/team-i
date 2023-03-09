@@ -9,104 +9,58 @@ header {
     height: 65px;
 }
 
+.btn {
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-color: #7C73E6;
+    border-radius: 34px;
+    padding: 20px 20px;
+    border-color: #7C73E6;
+    font-weight: bold;
+}
+
 a {
     text-decoration: none;
-}
-
-/*モーダル*/
-.login, .signup{
-    float: right;
-    transition: all 0.5s;
-    line-height: 65px;
-    padding: 0 25px;
-    cursor: pointer;
-    display: flex;
-    border-radius: 34px;
-    margin: 5px;
-}
-
-.login {
-    background-color: #7C73E6;
     color: white;
 }
 
-.signup {
-    background-color: #BFCCFF;
-    color:#7C73E6;
-}
-
-.login:hover {
-    opacity: 0.5;
-}
-
-.signup:hover {
-    opacity: 0.5;
-}
-
-
-.login-modal-wrapper, .signup-modal-wrapper {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+/*モーダル*/
+.modal-content{
     background-color: #7C73E6;
-    z-index: 100;
-    opacity: 0.9;
-    display: none;
+}  
+
+.modal-title{
+    color: white;
 }
- 
-.modal {
-    position: absolute;
-    top: 20%;
-    left: 34%;
-    background-color: #e6ecf0;
-    padding: 20px 0 40px;
-    border-radius: 10px;
-    width: 450px;
-    height: auto;
+
+.modal-body{
+    margin: 0 auto;
     text-align: center;
 }
-  
-.fa-times {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    color: rgba(128, 128, 128, 0.46);
-    cursor: pointer;
+
+.form{
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-#signup-form, #login-form {
-    width: 100%;
-  }
-  
-#signup-form h2, #login-form h2 {
-    color: #FFFFFF;
-    letter-spacing: 1px;
-    margin-bottom: 40px;
+.form-control{
+    height: 50px;
+    padding: 20px 100px 20px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-  
-  #signup-form input, #login-form input {
-    width: 320px;
-    margin-bottom: 20px;
-    font-size: 12px;
-    padding: 12px 12px;
-    border: 1px solid #d0d5d8;
-    border-radius: 5px;
-  }
-  
-  #submit-btn {
-    display: inline-block;
-    padding: 14px 140px;
-    background-color: #BFCCFF;
-    border: none;
-    border-radius: 3px;
-    color: #7C73E6;
-    margin: 10px auto;
-    cursor: pointer;
-  }
-  
-  
+
+#submit-btn{
+    color:#7C73E6;
+    background-color: #bfccff;
+    padding: 20px 60px;
+    text-align: center;
+    border-color: #bfccff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}  
 
 /* アプリロゴ */
 .apptop img{
@@ -115,27 +69,6 @@ a {
     text-align: center;
     margin: 0 25%;
 }
-
-
-/* .btn-primary {
-    height: 75px;
-    width: 150px;
-    float: right;
-    margin: 5px;
-    border-radius: 34px;
-}
-
-.btn-primary-2 {
-    background-color: #BFCCFF;
-    border-color: #7C73E6;
-    border-width: 2px;
-    color:#7C73E6;
-}
-
-.btn-primary-1 {
-    background-color: #7C73E6;
-    border-color: #7C73E6;
-} */
 
 .menu{
     height: 300px;
