@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#bfccff">
+
+  <!--外部ファイル読み込み-->
+　<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="stage.css">
+</head>
+
+<body>
+    <header>
+        <div class="identity">
+            <a href="../mainpage/main.html"><img class="logo" src="../img/bunjopro-logo.png"></a>
+        </div>
+        <!--userアイコンいれるなら、ここにコードかき、さらにdiv classで囲って、cssのdropdownクラスのfloat:right;を新しく囲ったclassに対して指定する-->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              進捗をみる
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">1. はじめに</a></li>
+              <li><a class="dropdown-item" href="#">2. Glitchの登録</a></li>
+              <li><a class="dropdown-item" href="#">3. Progate HTML/CSS初級編に挑戦</a></li>
+              <li><a class="dropdown-item" href="#">4. デバッグで作品を完成させる</a></li>
+              <li><a class="dropdown-item" href="#">5. デバッグの準備</a></li>
+              <li><a class="dropdown-item" href="#">6. タイトルのデバッグ</a></li>
+              <li><a class="dropdown-item" href="#">7. リストのデバッグ</a></li>
+              <li><a class="dropdown-item" href="#">8. 文字の大きさのデバッグ</a></li>
+              <li><a class="dropdown-item" href="#"></a></li>
+
+            </ul>
+          </div>
+
+    </header>
+    <h1>テーマ</h1>
+    <div class="main-container">
+        <div class="flow">
+            <div class="flow-text">
+                <p>①自分のGlitchのページを開く。<br>
+                    ②今回の該当箇所を探そう。<br>
+                    　　HTMLのデバッグ :「index.html」<br>
+                    　　CSSのデバッグ  :「style.css」<br>
+                    ③コードを書き換えよう。<br>
+                    ④書き換えたら、「答えをみる」をタップ。<br>
+                    　自分のコードと答えを照らし合わせよう。<br>
+                    ⑤あっていたら、「できた！」をタップ！</p>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      ヒント
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        ヒントかく
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        答えをみる
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <a href="...">CODEPENのリンクおく</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <button class="done" type="button">できた！</button>
+        </div>
+        <div class="code-img">
+            <img src="..."><!--デバッグ前の画像-->
+            <img src="..."><!--デバッグ後の画像-->
+        </div>
+    </div>
+    <footer>
+        <div class="footer-img">
+            <img src="../img/snowland.png">
+            <img src="../img/snowland.png">
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><!--bootstrap用jsCDN-->
+</body>
+
+</html>

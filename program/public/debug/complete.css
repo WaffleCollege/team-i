@@ -1,0 +1,18 @@
+.video video{
+    margin: 0 15%;
+    width: 70%;
+}
+
+.action {
+    text-align: center;
+}
+
+.button {
+    margin: 0 auto;
+    background-color: #7C73E6;
+    border-color: #7C73E6;
+    color: white;
+    font-weight: bold;
+    padding: 25px; 
+    border-radius: 34px;
+}
