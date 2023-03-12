@@ -76,3 +76,7 @@ header{
     width: 20%;
 }
 
+footer {
+    position: relative;
+    bottom: 0px;
+}
