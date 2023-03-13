@@ -1,6 +1,16 @@
 import express from "express";
 let app = express();
 
+//API_KEY
+require("dotenv").config({ debug: true });
+
+//API_KEY error check
+if (typeof process.env.API_KEY === "undefined") {
+  console.error('Error: "KEY1" is not set.');
+  console.error("Please consider adding a .env file with KEY1.");
+  process.exit(1);
+}
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider } from "firebase/auth";
