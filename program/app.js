@@ -1,5 +1,6 @@
 // import express from "express";
 const express = require("express");
+const path = require('path');
 let app = express();
 const pg = require("pg");
 //const functions = require('firebase-functions');
@@ -14,27 +15,6 @@ if (typeof process.env.API_KEY === "undefined") {
   process.exit(1);
 }
 
-// Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider } from "firebase/auth";
-// import { getFirestore } from "firebase/firestore"
-
-// // Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: process.env.API_KEY,
-//   authDomain: process.env.AUTH_DOMAIN,
-//   projectId: process.env.PROJECT_ID,
-//   storageBucket: process.env.STORAGE_BUCKET,
-//   messagingSenderId: process.env.MESSAGING_SENDER_ID,
-//   appId: process.env.APP_ID
-// };
-
-// // Initialize Firebase
-// const firebaseapp = initializeApp(firebaseConfig);
-// const auth = getAuth(firebaseapp);
-// const provider = new GithubAuthProvider();
-// const db = getFirestore(firebaseapp);
-// provider.addScope("repo");
 
 var pool = new pg.Pool({
   database: process.env.PG_DATABASE,
@@ -48,8 +28,7 @@ var pool = new pg.Pool({
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.sendFile("main.html");
-    
+    res.sendFile(path.join(__dirname, 'public', 'mainpage', 'main.html'));
 });
 
 app.post("/signup", (req, res) => {
