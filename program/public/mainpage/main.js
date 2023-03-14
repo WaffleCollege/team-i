@@ -1,28 +1,21 @@
-// 新規登録処理
-// register.addEventListener('click', function(e) {
-//     var mailAddress = document.getElementById('mailAddress').value;
-//     var password = document.getElementById('password').value;
-//     console.log ("動いてる");
-//     firebase.auth().createUserWithEmailAndPassword(mailAddress, password)
-//     .catch(function(error) {
-//       alert('登録できません（' + error.message + '）');
-//     });
-// });
+import { auth } from "../firebase.js";
+import {signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider} from "firebase/auth";
 
-// import firebase from "dddd"
-
-export function createAccount() {
+export async function createAccount() {
     var mailAddress = document.getElementById('mailAddress').value;
     var password = document.getElementById('password').value;
-    console.log ("動いてる");
-    console.log (mailAddress, password);
+    // console.log ("動いてる");
+    // console.log (mailAddress, password);
   
   
-    firebase.auth().signInWithEmailAndPassword(mailAddress, password)
+    const firebaseResult = await signInWithEmailAndPassword(mailAddress, password)
+    
       .catch(function(error) {
         alert('ログインできません（' + error.message + '）');
       });
+    console.log(firebaseResult);
   }
+  
   
   document.getElementById("register").addEventListener("click", createAccount);
   

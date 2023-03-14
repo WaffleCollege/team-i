@@ -1,7 +1,8 @@
-import express from "express";
+// import express from "express";
+const express = require("express");
 let app = express();
 const pg = require("pg");
-const functions = require('firebase-functions');
+//const functions = require('firebase-functions');
 
 //API_KEY
 require("dotenv").config({ debug: true });
@@ -14,26 +15,26 @@ if (typeof process.env.API_KEY === "undefined") {
 }
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider } from "firebase/auth";
-import { getFirestore } from "firebase/firestore"
+// import { initializeApp } from "firebase/app";
+// import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider } from "firebase/auth";
+// import { getFirestore } from "firebase/firestore"
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID,
-  appId: process.env.APP_ID
-};
+// // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: process.env.API_KEY,
+//   authDomain: process.env.AUTH_DOMAIN,
+//   projectId: process.env.PROJECT_ID,
+//   storageBucket: process.env.STORAGE_BUCKET,
+//   messagingSenderId: process.env.MESSAGING_SENDER_ID,
+//   appId: process.env.APP_ID
+// };
 
-// Initialize Firebase
-const firebaseapp = initializeApp(firebaseConfig);
-const auth = getAuth(firebaseapp);
-const provider = new GithubAuthProvider();
-const db = getFirestore(firebaseapp);
-provider.addScope("repo");
+// // Initialize Firebase
+// const firebaseapp = initializeApp(firebaseConfig);
+// const auth = getAuth(firebaseapp);
+// const provider = new GithubAuthProvider();
+// const db = getFirestore(firebaseapp);
+// provider.addScope("repo");
 
 var pool = new pg.Pool({
   database: process.env.PG_DATABASE,
