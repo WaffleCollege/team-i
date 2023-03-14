@@ -1,5 +1,6 @@
 // import express from "express";
 const express = require("express");
+const path = require('path');
 let app = express();
 const pg = require("pg");
 //const functions = require('firebase-functions');
@@ -48,8 +49,7 @@ var pool = new pg.Pool({
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.sendFile("main.html");
-    
+    res.sendFile(path.join(__dirname, 'public', 'mainpage', 'main.html'));
 });
 
 app.post("/signup", (req, res) => {
