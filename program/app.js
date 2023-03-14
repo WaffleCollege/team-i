@@ -52,6 +52,10 @@ app.get("/", (req, res) => {
     
 });
 
+app.post("/signup/", (req, res) => {
+  const getSignUp = req;
+})
+
 pool.connect();
 
 app.listen(8080, () => {

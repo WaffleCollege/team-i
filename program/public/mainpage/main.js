@@ -9,9 +9,32 @@ export async function createAccount() {
   
   
     const firebaseResult = await signInWithEmailAndPassword(mailAddress, password)
-
       .catch(function(error) {
         alert('ログインできません（' + error.message + '）');
+      });
+      console.log(firebaseResult);
+
+      if(firebaseResult && firebaseResult.user) {
+        const userData = firebaseResult.user;
+        const loginData = {
+          userName: userData.userName,
+          email: userData.email,
+          userId: userData.userId
+        }
+      };
+
+      fetch ('/signup/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+      })
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
       });
     console.log(firebaseResult);
   }
