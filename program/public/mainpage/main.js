@@ -14,29 +14,30 @@ export async function createAccount() {
       });
       console.log(firebaseResult);
 
+      
       if(firebaseResult && firebaseResult.user) {
         const userData = firebaseResult.user;
-        const loginData = {
-          userName: userData.userName,
+        const signupData = {
+          userName: userData.displayName,
           email: userData.email,
-          userId: userData.userId
+          userId: userData.uid
         }
-      };
 
-      fetch ('/signup/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(loginData)
-      })
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-    console.log(firebaseResult);
+        fetch ('/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(signupData)
+        })
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+      };
+      console.log(firebaseResult);
   }
   
   

@@ -52,8 +52,8 @@ app.get("/", (req, res) => {
     
 });
 
-app.post("/signup/", (req, res) => {
-  const getSignUp = req;
+app.post("/signup", (req, res) => {
+  const getemail = req.body.getemail;
 })
 
 pool.connect();
