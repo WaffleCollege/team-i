@@ -1,4 +1,4 @@
-import { auth } from "../firebase.js";
+import { auth, provider } from "./firebase.js";
 import {signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider} from "firebase/auth";
 
 export async function createAccount() {
@@ -9,7 +9,7 @@ export async function createAccount() {
   
   
     const firebaseResult = await signInWithEmailAndPassword(mailAddress, password)
-    
+
       .catch(function(error) {
         alert('ログインできません（' + error.message + '）');
       });
