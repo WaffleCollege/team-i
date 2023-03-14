@@ -1,5 +1,6 @@
 import express from "express";
 let app = express();
+const pg = require("pg");
 
 //API_KEY
 require("dotenv").config({ debug: true });
@@ -33,6 +34,14 @@ const provider = new GithubAuthProvider();
 const db = getFirestore(firebaseapp);
 provider.addScope("repo");
 
+var pool = new pg.Pool({
+  database: "postgres",
+  user: "postgres",
+  password: "Tona0418",
+  host: "localhost",
+  port: 5432
+})
+
 
 app.use(express.static("public"));
 
@@ -40,6 +49,8 @@ app.get("/", (req, res) => {
     res.sendFile("main.html");
     
 });
+
+pool.connect();
 
 app.listen(8080, () => {
     console.log("Start Server!");
