@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
@@ -16,8 +16,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const firebaseapp = initializeApp(firebaseConfig);
 const auth = getAuth(firebaseapp);
-const provider = new GithubAuthProvider();
 const db = getFirestore(firebaseapp);
 provider.addScope("repo");
 
-export {auth, db, provider}
+export {auth, db}
