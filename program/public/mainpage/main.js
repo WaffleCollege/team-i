@@ -1,28 +1,45 @@
-// 新規登録処理
-// register.addEventListener('click', function(e) {
-//     var mailAddress = document.getElementById('mailAddress').value;
-//     var password = document.getElementById('password').value;
-//     console.log ("動いてる");
-//     firebase.auth().createUserWithEmailAndPassword(mailAddress, password)
-//     .catch(function(error) {
-//       alert('登録できません（' + error.message + '）');
-//     });
-// });
+import { auth, provider } from "./firebase.js";
+import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth";
 
-// import firebase from "dddd"
-
-export function createAccount() {
+export async function createAccount() {
     var mailAddress = document.getElementById('mailAddress').value;
     var password = document.getElementById('password').value;
-    console.log ("動いてる");
-    console.log (mailAddress, password);
+    // console.log ("動いてる");
+    // console.log (mailAddress, password);
   
   
-    firebase.auth().signInWithEmailAndPassword(mailAddress, password)
+    const firebaseResult = await signInWithEmailAndPassword(mailAddress, password)
       .catch(function(error) {
         alert('ログインできません（' + error.message + '）');
       });
+      console.log(firebaseResult);
+
+      
+      if(firebaseResult && firebaseResult.user) {
+        const userData = firebaseResult.user;
+        const signupData = {
+          userName: userData.displayName,
+          email: userData.email,
+          userId: userData.uid
+        }
+
+        fetch ('/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(signupData)
+        })
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+      };
+      console.log(firebaseResult);
   }
+  
   
   document.getElementById("register").addEventListener("click", createAccount);
   
