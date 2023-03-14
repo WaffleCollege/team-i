@@ -1,6 +1,7 @@
 import express from "express";
 let app = express();
 const pg = require("pg");
+const functions = require('firebase-functions');
 
 //API_KEY
 require("dotenv").config({ debug: true });
@@ -35,11 +36,11 @@ const db = getFirestore(firebaseapp);
 provider.addScope("repo");
 
 var pool = new pg.Pool({
-  database: "postgres",
-  user: "postgres",
-  password: "Tona0418",
-  host: "localhost",
-  port: 5432
+  database: process.env.PG_DATABASE,
+  user: process.env.PG_USER,
+  password: process.env.PG_PASSWORD,
+  host: process.env.PG_HOST,
+  port: process.env.PG_PORT
 })
 
 
