@@ -53,7 +53,10 @@ app.get("/", (req, res) => {
 });
 
 app.post("/signup", (req, res) => {
-  const getemail = req.body.getemail;
+  const getuserEmail = req.body.email;
+  console.log("email:", getuserEmail);
+  const getuserName = req.body.displayName;
+  const getuserId = req.body.uid;
 })
 
 pool.connect();
