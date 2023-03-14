@@ -12,6 +12,7 @@
     <meta name="description" content="文系女子大生向けのプログラミング学習お助けアプリです。" />  
 
   <!--外部ファイル読み込み-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./mainpage//main.css">
 </head>
@@ -48,10 +49,44 @@
 </div>
   <div class="apptop">
       <img src="../img/bunjopro-logo.png">
+      <a href="#modal" class="modal-open"></a>
+      <!--モーダル部分の表示-->
+      <div class="modal-wrapper">
+        <div id="modal">
+            <div id="close-modal">
+                <i id="fa"></i>
+            </div>
+            <div id="explain">
+                <div id="explain-text">
+                    <h1>ぶんじょプロに<br>たどり着いたあなたへ。</h1>
+                    <p>
+                        ぶんじょプロへようこそ。<br>
+                        プログラミングに興味をもって、ここにたどり着いたのかな。<br>
+                        それとも、プログラミング学習に不安を抱いてきたのかな。<br>
+                        日本には、ＩＴ業界のジェンダーギャップが存在しているのを知っているかな？大学で情報系の学部に進む女子学生が少なかったり、そもそも女性エンジニアというロールモデルが不足していて、女子学生がエンジニアを目指そうと思える環境が不十分だったり。    
+                    </p>
+                    <p>
+                        そんななか、「プログラミング」という言葉に興味をもってくれたあなたを誇りに思うよ。プログラミングはあなたの武器になる。文系学生でも、プログラミングはできる。女子学生がプログラミングをすることで
+                        女性目線でものをつくったり、科学技術に女性の視点を入れたり、女性にも優しい社会がつくられるんだ。
+                    </p>
+                    <p>
+                        ぶんじょプロは、そんなあなたのプログラミング学習に<br>
+                        ロードマップを通して、伴走するよ。<br>
+                        一緒にプログラミングを頑張ろう。
+                    </p>
+
+                    <p><span>まずは新規登録orログイン！</span></p>
+                </div>
+                <div id="snowman-img-modal">
+                    <img src="../img/snowman.png">
+                </div>
+            </div>
+        </div>    
+    </div>
   </div>
   <div class="menu">
-    <h3><a href="../debug/main.html">①　はじめてのプログラミング体験</a></h3>
-    <h3><a href="../roadmap/startpage/startpage.html">②　プログラミングのロードマップ</a></h3>
+    <h3><a href="">①　はじめてのプログラミング体験</a></h3>
+    <h3><a href="">②　プログラミングのロードマップ</a></h3>
   </div>
   <div id="snowman-img">
     <img src="../img/snowman.png">
@@ -63,6 +98,9 @@
         <img src="../img/snowland.png">
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><!--bootstrap用jsCDN-->
   <script type="text/javascript" src="../script.js"></script>
 </body>

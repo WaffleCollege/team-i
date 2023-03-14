@@ -88,6 +88,10 @@ a {
     color: #FFFFFF;
 }
 
+a:hover{
+    opacity: 0.5;
+}
+
 #snowman-img{
     position: absolute;
     bottom: 0px;
@@ -105,4 +109,28 @@ a {
     display: flex;
 }
 
+/*最初のモーダル*/
+#modal {
+    display: none;
+}
 
+.modaal-container {
+    max-width: 80%;
+    background-color: #bfccff;
+}
+
+#explain {
+    float: left;
+    display: flex;
+    padding: 5% 10% 10% 10%;
+}
+
+#explain-text span{
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#snowman-img-modal img{
+    margin-left: 30px;
+    margin-top: 50px;
+}

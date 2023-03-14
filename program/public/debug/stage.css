@@ -74,3 +74,7 @@ footer{
     border-color: #7C73E6;
     padding: 20px;
 }
+
+a:hover{
+    opacity: 0.5;
+}
