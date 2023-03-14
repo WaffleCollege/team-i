@@ -1,5 +1,5 @@
 import { auth, provider } from "./firebase.js";
-import {signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider} from "firebase/auth";
+import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth";
 
 export async function createAccount() {
     var mailAddress = document.getElementById('mailAddress').value;
