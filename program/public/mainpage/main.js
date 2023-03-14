@@ -1,6 +1,7 @@
 import { auth, provider } from "./firebase.js";
 import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth";
 
+//signup
 export async function createAccount() {
     var mailAddress = document.getElementById('mailAddress').value;
     var password = document.getElementById('password').value;
@@ -44,17 +45,7 @@ export async function createAccount() {
   document.getElementById("register").addEventListener("click", createAccount);
   
   
-  // ログイン処理
-  // login.addEventListener('click', function(e) {
-  //     var mailAddress = document.getElementById('mailAddress').value;
-  //     var password = document.getElementById('password').value;
-      
-  //     firebase.auth().signInWithEmailAndPassword(mailAddress, password)
-  //     .catch(function(error) {
-  //       alert('ログインできません（' + error.message + '）');
-  //     });
-  // });
-  
+  //login
   export function login(){
     console.log ("login");
     var mailAddress = document.getElementById('mailAddress').value;
