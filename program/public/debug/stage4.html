@@ -24,10 +24,10 @@
               ステージ一覧
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">1. はじめに</a></li>
-              <li><a class="dropdown-item" href="#">2. Glitchの登録</a></li>
-              <li><a class="dropdown-item" href="#">3. Progate HTML/CSS初級編に挑戦</a></li>
-              <li><a class="dropdown-item" href="#">4. デバッグで作品を完成させる</a></li>
+              <li><a class="dropdown-item" href="stage1.html">1. はじめに</a></li>
+              <li><a class="dropdown-item" href="stage2.html">2. Glitchの登録</a></li>
+              <li><a class="dropdown-item" href="stage3.html">3. Progate HTML/CSS初級編に挑戦</a></li>
+              <li><a class="dropdown-item" href="stage4.html">4. デバッグで作品を完成させる</a></li>
               <li><a class="dropdown-item" href="#">5. デバッグの準備</a></li>
               <li><a class="dropdown-item" href="#">6. タイトルのデバッグ</a></li>
               <li><a class="dropdown-item" href="#">7. リストのデバッグ</a></li>
@@ -38,53 +38,29 @@
           </div>
 
     </header>
-    <h1>テーマ</h1>
+    <h1>デバッグで作品を完成させる</h1>
     <div class="main-container">
         <div class="flow">
             <div class="flow-text">
-                <p>①自分のGlitchのページを開く。<br>
-                    ②今回の該当箇所を探そう。<br>
-                    　　HTMLのデバッグ :「index.html」<br>
-                    　　CSSのデバッグ  :「style.css」<br>
-                    ③コードを書き換えよう。<br>
-                    ④書き換えたら、「答えをみる」をタップ。<br>
-                    　自分のコードと答えを照らし合わせよう。<br>
-                    ⑤あっていたら、「できた！」をタップ！</p>
-            </div>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      ヒント
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        ヒントかく
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        答えをみる
-                      </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <a href="...">CODEPENのリンクおく</a>
-                      </div>
-                    </div>
-                  </div>
+              <h3 style="line-height: 20px;">デバッグとは？</h3>
+              <p>プログラムの中の間違った場所をみつけて、正しいコードに書き直すこと。これ以降のステージでは、デバッグを繰り返していくことで、ひとつの作品が出来上がっていくから、お楽しみに！</p>
+              <p>下のボタンから、「デバッグをする３つの手順」まで、目を通そう。</p>
+              <a href="https://web-camp.io/magazine/archives/84918" target="_blank" rel="noopener noreferrer"><button class=btn>記事に進む</button></a>
+              <h3 style="margin-top: 30px;">このコースのデバッグ中のルール</h3>
+              <ul>
+                <li>わからなかったら、まずはググる！そしてヒントをみつける！</li>
+                <li>一度ググってみて、わからなかったら、ヒントのタブをクリック！<br>
+                ヒントをもとに、答えを考えてみよう。</li>
+                <li>それでも分からないときは、答えのタブをクリック</li>
+              </ul>
             </div>
             <a href="stage5.html"><button id="done" type="button">できた！</button></a>
         </div>
         <div class="code-img">
-            <img src="..."><!--デバッグ前の画像-->
-            <img src="..."><!--デバッグ後の画像-->
+            <img id="snowman" src="../img/snowman.png"><!--デバッグ前の画像-->
         </div>
     </div>
-    <footer style="position: absolute;">
+    <footer>
         <div class="footer-img">
             <img src="../img/snowland.png">
             <img src="../img/snowland.png">

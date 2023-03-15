@@ -16,7 +16,7 @@ h3{
 }
 
 .flow{
-    width: 45%;/*width: 50%;??*/
+    width: 60%;
     margin: 0 1% 0 7%;
 }
 
@@ -28,7 +28,7 @@ h3{
 /*アコーディオン*/
 .accordion{
     margin: 20px 5% 20px 0;
-    width: 70%;
+    width: 100%;
 }
 
 .accordion-item, .accordion-button, .btn{
@@ -58,7 +58,7 @@ h3{
 
 /*画面右側*/
 .code-img{
-    width: 45%;/*width: 50%;??*/
+    width: 40%;/*width: 50%;??*/
     display: flex;
     flex-direction: column;
     margin:0 7% 0 1%;
@@ -117,3 +117,27 @@ a:hover{
 
 }
 
+/*stage4の雪だるま*/
+#snowman{
+    width: 60%;
+    margin-left: 100px;
+}
+
+/*stage5カルーセル文字*/
+.carousel-item h5, .carousel-item p{
+    font-weight: bold;
+    background-color: white;
+}
+
+/*stage6以降*/
+.code-img img{
+    border: 5px solid #7C73E6;
+}
+
+.code-img h5{
+    text-align: center;
+    font-weight: bold;
+    background-color: #7C73E6;
+    color: white;
+    margin-top: 20px;
+}
