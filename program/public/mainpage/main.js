@@ -17,7 +17,7 @@
 // //const db = getFirestore(firebaseapp);
 // provider.addScope("repo");
 
-import {auth} from "./firebase.js";
+import {auth} from "../app.js";
 
 //signup
 export async function createAccount() {
