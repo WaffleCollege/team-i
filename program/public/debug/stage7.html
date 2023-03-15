@@ -24,13 +24,13 @@
               ステージ一覧
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">1. はじめに</a></li>
-              <li><a class="dropdown-item" href="#">2. Glitchの登録</a></li>
-              <li><a class="dropdown-item" href="#">3. Progate HTML/CSS初級編に挑戦</a></li>
-              <li><a class="dropdown-item" href="#">4. デバッグで作品を完成させる</a></li>
-              <li><a class="dropdown-item" href="#">5. デバッグの準備</a></li>
-              <li><a class="dropdown-item" href="#">6. タイトルのデバッグ</a></li>
-              <li><a class="dropdown-item" href="#">7. リストのデバッグ</a></li>
+              <li><a class="dropdown-item" href="stage1.html">1. はじめに</a></li>
+              <li><a class="dropdown-item" href="stage2.html">2. Glitchの登録</a></li>
+              <li><a class="dropdown-item" href="stage3.html">3. Progate HTML/CSS初級編に挑戦</a></li>
+              <li><a class="dropdown-item" href="stage4.html">4. デバッグで作品を完成させる</a></li>
+              <li><a class="dropdown-item" href="stage5.html">5. デバッグの準備</a></li>
+              <li><a class="dropdown-item" href="stage6.html">6. タイトルのデバッグ</a></li>
+              <li><a class="dropdown-item" href="stage7.html">7. リストのデバッグ</a></li>
               <li><a class="dropdown-item" href="#">8. 文字の大きさのデバッグ</a></li>
               <li><a class="dropdown-item" href="#"></a></li>
 
@@ -38,7 +38,7 @@
           </div>
 
     </header>
-    <h1>テーマ</h1>
+    <h1>リストのデバッグ</h1>
     <div class="main-container">
         <div class="flow">
             <div class="flow-text">
@@ -60,7 +60,11 @@
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        ヒントかく
+                        <ul>
+                          <li>デバッグ前の画像とデバッグ後の画像で変わっているところは？</li>
+                          <li>変わっているところは、どう変化すればいい？</li>
+                          <li>デバッグしたい箇所のHTMLからみていこう。何かヒントはないかな？</li>
+                        </ul>
                     </div>
                   </div>
                 </div>
@@ -72,16 +76,26 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
-                        <a href="...">CODEPENのリンクおく</a>
+                        <p></p>
+                        <p>コードを大画面でみる場合、右上の「EDIT ON CODEPEN」をクリック。<br>
+                        本画面で原寸大でみる場合、倍率「0.25×」をクリック。</p>
+                        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ExeQgWp" data-user="nonchy-83" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                          <span>See the Pen <a href="https://codepen.io/nonchy-83/pen/ExeQgWp">
+                          6_after</a> by nonchy-83 (<a href="https://codepen.io/nonchy-83">@nonchy-83</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
                       </div>
                     </div>
                   </div>
             </div>
-            <a href="stage"><button id="done" type="button">できた！</button></a>
+            <a href="stage8.html"><button id="done" type="button">できた！</button></a>
         </div>
-        <div class="code-img">
-            <img src="..."><!--デバッグ前の画像-->
-            <img src="..."><!--デバッグ後の画像-->
+        <div class="code-img" style="width: 30%;">
+          <h5 style="margin-top: 0;">デバッグ前の状態</h5>
+          <img src="../img/7-before,6-after.png"><!--デバッグ前の画像-->
+          <h5>デバッグ後の理想状態</h5>
+          <img src="../img/8-before,7-after.png"><!--デバッグ後の画像-->
         </div>
     </div>
     <footer>
