@@ -31,12 +31,32 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'mainpage', 'main.html'));
 });
 
-app.post("/signup", (req, res) => {
+app.post("/signup", async(req, res) => {
   const getuserEmail = req.body.email;
   console.log("email:", getuserEmail);
   const getuserName = req.body.displayName;
-  const getuserId = req.body.uid;
+  const getuserID = req.body.uid;
+ try {
+
+  const client = await pool.connect();
+  await client.query ("INSERT INTO users (user_name, email, password) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
+  client.release();
+
+
+  const redirectpage = "/main2.html";
+  res.redirect(redirectpage);
+ } catch (err) {
+  console.log(err);
+  res.status(500).send("データベースエラーが発生しました");
+ }
+
+
 })
+
+// app.get("/signup", (req, res) => {
+//   const redirectpage = "/main2.html";
+//   res.redirect(redirectpage);
+// })
 
 pool.connect();
 
