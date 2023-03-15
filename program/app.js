@@ -39,7 +39,7 @@ app.post("/signup", async(req, res) => {
  try {
 
   const client = await pool.connect();
-  await client.query ("INSERT INTO users (user_name, email, password) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
+  await client.query ("INSERT INTO users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
   client.release();
 
 
