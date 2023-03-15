@@ -5,8 +5,8 @@ let app = express();
 const pg = require("pg");
 //const functions = require('firebase-functions');
 
-const firebase = require("firebase/app");
-require("firebase/auth");
+// const firebase = require("firebase/app");
+// require("firebase/auth");
 
 //API_KEY
 require("dotenv").config({ debug: true });
@@ -17,18 +17,6 @@ if (typeof process.env.API_KEY === "undefined") {
   console.error("Please consider adding a .env file with KEY1.");
   process.exit(1);
 }
-
-//firebase
-const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID,
-  appId: process.env.APP_ID
-};
-
-firebase.initializeApp(firebaseConfig);
 
 
 var pool = new pg.Pool({
