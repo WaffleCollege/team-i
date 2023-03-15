@@ -28,7 +28,7 @@ header {
 }
 
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0px;
 }/*あとから追加したため、他のページに悪影響でていないかチェック*/
 
