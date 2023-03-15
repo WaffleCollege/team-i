@@ -43,8 +43,9 @@ app.post("/signup", async(req, res) => {
   client.release();
 
 
-  const redirectpage = "/main2.html";
-  res.redirect(redirectpage);
+  console.log("post動いてる？")
+  const redirectpage = 'main2.html';
+  res.redirect('/public/mainpage/' + redirectpage);
  } catch (err) {
   console.log(err);
   res.status(500).send("データベースエラーが発生しました");

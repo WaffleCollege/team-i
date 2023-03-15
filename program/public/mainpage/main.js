@@ -5,8 +5,8 @@ import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from "fireba
 export async function createAccount() {
     var mailAddress = document.getElementById('mailAddress').value;
     var password = document.getElementById('password').value;
-    // console.log ("動いてる");
-    // console.log (mailAddress, password);
+    console.log ("動いてる");
+    console.log (mailAddress, password);
   
   
     const firebaseResult = await signInWithEmailAndPassword(mailAddress, password)
