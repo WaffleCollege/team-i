@@ -69,10 +69,6 @@ h3{
     line-height: 28px;
 }
 
-footer{
-    position: absolute;
-    bottom: 0px;
-}
 
 /*ナビバー*/
 .dropdown{
@@ -112,3 +108,12 @@ a:hover{
 .to-next{
     text-align: center;
 }
+
+/*stage2画像ボタン*/
+.card-img{
+    position: relative;
+    height: 100%;
+    opacity: 0.5;
+
+}
+
