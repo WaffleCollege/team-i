@@ -1,12 +1,8 @@
-// import express from "express";
 const express = require("express");
 const path = require('path');
 let app = express();
 const pg = require("pg");
-//const functions = require('firebase-functions');
 
-// const firebase = require("firebase/app");
-// require("firebase/auth");
 
 //API_KEY
 require("dotenv").config({ debug: true });
