@@ -24,7 +24,7 @@
               ステージ一覧
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">1. はじめに</a></li>
+              <li><a class="dropdown-item" href="stage1.html">1. はじめに</a></li>
               <li><a class="dropdown-item" href="#">2. Glitchの登録</a></li>
               <li><a class="dropdown-item" href="#">3. Progate HTML/CSS初級編に挑戦</a></li>
               <li><a class="dropdown-item" href="#">4. デバッグで作品を完成させる</a></li>
@@ -40,23 +40,36 @@
     </header>
     <h1>はじめに</h1>
     <div class="main-container">
-        <div class="flow">
-            <div class="flow-text">
-              <h3>プログラミングとは？</h3>
-              <p>コンピュータに行ってほしい指示をコンピュータが理解できる言葉で表したものを「プログラム」というよ！
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">プログラミングとは？</h3>
+            <p class="card-text">コンピュータに行ってほしい指示をコンピュータが理解できる言葉で表したものを「プログラム」というよ！
               そのプログラムを書くことを、一般に「プログラミング」というんだ。</p>
-              <p><a href="https://tech-camp.in/note/technology/226/">こちらの記事をタップ。</a><br>１プログラミングとは？<br>２プログラミングでできることや活用事例<br>を読もう。</p>
-            </div>
-            <button class="done" type="button"><a href="stage2.html">できた！</a></button>
+            <h5>記事で深める。</h5>
+            <p>１プログラミングとは？<br>２プログラミングでできることや活用事例<br>を読もう。</p>
+            <a href="https://tech-camp.in/note/technology/226/" class="btn" target="_blank" rel="noopener noreferrer">記事に進む</a>
+          </div>
         </div>
-        <div class="code-img" style=" margin-left: 50px;">
-          <h3>今回使う、HTML/CSSとは？</h3>
-          <p>Webページをつくるための言語。HTMLは、ページの内容をつくり、CSSはHTMLで作ったページを装飾するために使われているよ。
-            プログラミングのスタートにピッタリの言語なんだ！</p>
-          <p><a href="https://www.sedesign.co.jp/blog/html-css">こちらの記事をタップ。</a><br>HTML・CSSとはWebページを構成する言語<br>のセクションを読もう。</p>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">今回使う、HTML/CSSとは？</h3>
+            <p class="card-text">Webページをつくるための言語。HTMLは、ページの内容をつくり、CSSはHTMLで作ったページを装飾するために使われているよ。
+              プログラミングのスタートにピッタリの言語なんだ！</p>
+            <h5>記事で深める。</h5>
+            <p>HTML・CSSとはWebページを構成する言語<br>のセクションを読もう。</p>
+            <a href="https://www.sedesign.co.jp/blog/html-css" class="btn" target="_blank" rel="noopener noreferrer">記事に進む</a>
+          </div>
         </div>
+      </div>
     </div>
-    <footer>
+    <div class="to-next">
+      <a href="stage2.html"><button id="done" type="button" style="margin: 0 auto; width: 50%;">できた！</button></a>
+      <p>ステージを進んでいくごとに、<a href="../roadmap/startpage/startpage.html">ロードマップ</a>がどんどん見れるようになる！</p>  
+    </div>
+    <footer style="position: absolute;">
         <div class="footer-img" style="font-size: 20px; line-height: 28px;">
             <img src="../img/snowland.png">
             <img src="../img/snowland.png">

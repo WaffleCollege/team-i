@@ -6,7 +6,6 @@ h1{
 
 h3{
     font-weight: bold;
-    text-decoration: underline;
 }
 
 .main-container{
@@ -32,7 +31,7 @@ h3{
     width: 70%;
 }
 
-.accordion-item, .accordion-button{
+.accordion-item, .accordion-button, .btn{
     background-color: #bfccff;
     border-color: #7C73E6;
     border-width: 4px;
@@ -46,7 +45,7 @@ h3{
 }
 
 /*できたボタン*/
-.done {
+#done {
     margin: 20px 5% 20px 0;
     width: 70%;
     background-color: #7C73E6;
@@ -70,10 +69,6 @@ h3{
     line-height: 28px;
 }
 
-footer{
-    position: absolute;
-    bottom: 0px;
-}
 
 /*ナビバー*/
 .dropdown{
@@ -89,10 +84,36 @@ footer{
     padding: 20px;
 }
 
-.done a{
+#done a{
     color: white;
 }
 
 a:hover{
     opacity: 0.5;
 }
+
+/*stage1カード*/
+.col{
+    margin: 0 30px 30px 30px;
+}
+
+.card{
+    height: 360px;
+}
+
+.card-body a{
+    margin-top: 10px;
+}
+
+.to-next{
+    text-align: center;
+}
+
+/*stage2画像ボタン*/
+.card-img{
+    position: relative;
+    height: 100%;
+    opacity: 0.5;
+
+}
+
