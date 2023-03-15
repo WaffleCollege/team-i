@@ -35,7 +35,7 @@ app.post("/signup", async(req, res) => {
   const getuserEmail = req.body.email;
   console.log("email:", getuserEmail);
   const getuserName = req.body.displayName;
-  const getuserID = req.body.uid;
+  const getuserID = req.uid;
  try {
 
   const client = await pool.connect();
