@@ -5,6 +5,9 @@ let app = express();
 const pg = require("pg");
 //const functions = require('firebase-functions');
 
+// const firebase = require("firebase/app");
+// require("firebase/auth");
+
 //API_KEY
 require("dotenv").config({ debug: true });
 
@@ -31,12 +34,33 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'mainpage', 'main.html'));
 });
 
-app.post("/signup", (req, res) => {
+app.post("/signup", async(req, res) => {
   const getuserEmail = req.body.email;
   console.log("email:", getuserEmail);
   const getuserName = req.body.displayName;
-  const getuserId = req.body.uid;
+  const getuserID = req.uid;
+ try {
+
+  const client = await pool.connect();
+  await client.query ("INSERT INTO users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
+  client.release();
+
+
+  console.log("post動いてる？")
+  const redirectpage = 'main2.html';
+  res.redirect('/public/mainpage/' + redirectpage);
+ } catch (err) {
+  console.log(err);
+  res.status(500).send("データベースエラーが発生しました");
+ }
+
+
 })
+
+// app.get("/signup", (req, res) => {
+//   const redirectpage = "/main2.html";
+//   res.redirect(redirectpage);
+// })
 
 pool.connect();
 
