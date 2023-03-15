@@ -1,5 +1,12 @@
-// import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from "/firebase/auth";
-
+//import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
+//import { signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/compat/auth';
+import { auth } from '../firebase.js';
+//import { auth } from '../public/firebase.js';
+//const auth = require("../firebase.js");
+//const auth = getAuth();
+//import 'firebase/compat/auth';
+//import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
+//const auth = getAuth();
 
 //signup
 export async function createAccount() {
@@ -7,9 +14,11 @@ export async function createAccount() {
     var password = document.getElementById('password').value;
     console.log ("動いてる");
     console.log (mailAddress, password);
+
+    //console.log(createUserWithEmailAndPassword);
   
   
-    const firebaseResult = await createUserWithEmailAndPassword(auth,mailAddress, password)
+    const firebaseResult = await auth.createUserWithEmailAndPassword(mailAddress, password)
       .catch(function(error) {
         alert('ログインできません（' + error.message + '）');
       });
