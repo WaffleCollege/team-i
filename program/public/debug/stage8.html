@@ -31,14 +31,14 @@
               <li><a class="dropdown-item" href="stage5.html">5. デバッグの準備</a></li>
               <li><a class="dropdown-item" href="stage6.html">6. タイトルのデバッグ</a></li>
               <li><a class="dropdown-item" href="stage7.html">7. リストのデバッグ</a></li>
-              <li><a class="dropdown-item" href="#">8. 文字の大きさのデバッグ</a></li>
+              <li><a class="dropdown-item" href="stage8.html">8. 文字の大きさのデバッグ</a></li>
               <li><a class="dropdown-item" href="#"></a></li>
 
             </ul>
           </div>
 
     </header>
-    <h1>リストのデバッグ</h1>
+    <h1>文字の大きさのデバッグ</h1>
     <div class="main-container">
         <div class="flow">
             <div class="flow-text">
@@ -50,6 +50,7 @@
                     ④書き換えたら、「答えをみる」をタップ。<br>
                     　自分のコードと答えを照らし合わせよう。<br>
                     ⑤あっていたら、「できた！」をタップ！</p>
+                  <p>※今回の問題では、文字の大きさ（font-size）が36pxに変わります。</p>
             </div>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
@@ -76,11 +77,17 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
-                        <p></p>
-                        <p>コードを大画面でみる場合、右上の「EDIT ON CODEPEN」をクリック。<br>
-                        本画面で原寸大でみる場合、倍率「0.25×」をクリック。</p>
-                        
-                        
+                        <p>今回は、font-sizeを変化させたいので、CSSをデバッグするよ！見出しの大きさは変わらないから、htmlでは、「ゆきだるま」が「h3」タグのままなんだ。
+                          HTML上で「ゆきだるま」の文字が入った「h3」タグは、「profile-info」クラスの中に入っている。だから、CSSの中で、<code>.profile.info</code>を探そう。<br>
+                          始めの方に、<code>.profile-info h3</code>からはじまる部分がある。その中に、<code>font-size: 36px;</code>という指定が加えられているね！
+                          コードを大画面でみる場合、右上の「EDIT ON CODEPEN」をクリック。<br>
+                          本画面で原寸大でみる場合、倍率「0.25×」をクリック。</p>
+                        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="poOaEbP" data-user="nonchy-83" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                          <span>See the Pen <a href="https://codepen.io/nonchy-83/pen/poOaEbP">
+                          8_after</a> by nonchy-83 (<a href="https://codepen.io/nonchy-83">@nonchy-83</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                
                       </div>
                     </div>
                   </div>
@@ -89,9 +96,9 @@
         </div>
         <div class="code-img" style="width: 30%;">
           <h5 style="margin-top: 0;">デバッグ前の状態</h5>
-          <img src="../img/7-before,6-after.png"><!--デバッグ前の画像-->
+          <img src="../img/8-before,7-after.png"><!--デバッグ前の画像-->
           <h5>デバッグ後の理想状態</h5>
-          <img src="../img/8-before,7-after.png"><!--デバッグ後の画像-->
+          <img src="../img/9-before,8-after.png"><!--デバッグ後の画像-->
         </div>
     </div>
     <footer>

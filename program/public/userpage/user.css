@@ -1,0 +1,47 @@
+.main-container{
+    margin: 0 auto;
+}
+
+.info{
+    background-color:#7C73E6;
+    color: white;
+    padding: 10px 10px;
+    margin: 10px 0 10px 25%;
+    width: 50%;
+}
+
+.user-info{
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+.user-info h5{
+    padding: 60px;
+    font-weight: bold;
+}
+
+#stage-rank, #mail-address, #password{
+    display: flex;
+    justify-content: left;
+    margin: 30px 0;
+}
+
+#stage-rank h3, #mail-address h3, #password h3{
+    margin: 0 20px;
+}
+
+
+.action{
+    text-align: center;
+}
+
+.action button{
+    background-color: #7C73E6;
+    border-color: #7C73E6;
+    color: white;
+    font-weight: bold;
+    padding: 25px; 
+    border-radius: 34px;
+    margin: 0 10px;
+}
