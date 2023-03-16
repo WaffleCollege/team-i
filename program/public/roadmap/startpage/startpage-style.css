@@ -23,13 +23,12 @@ header {
 .apptop p{
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 20px;
     margin-bottom: 50px;
     text-align: center;
-
-    color: #000000;
+    color: #7C73E6;
 }
 
 /*５つの選択肢*/
