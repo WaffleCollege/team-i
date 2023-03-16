@@ -63,16 +63,18 @@ app.post("/signup", async(req, res) => {
       .catch(function(error) {
         console.log('ログインできません（' + error.message + '）');
       });
-  console.log(firebaseResult);
+  //console.log(firebaseResult);
 
   const getuserEmail = firebaseResult.user.email;
-  const getuserName = firebaseResult.user.email;
+  const getuserName = getuserEmail.slice(0, getuserEmail.indexOf('@'));;
   const getuserID = firebaseResult.user.uid;
+
+  console.log(getuserEmail, getuserName, getuserID);
 
   try {
 
     const client = await pool.connect();
-    await client.query ("INSERT INTO users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
+    await client.query ("INSERT INTO public.users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
     client.release();
 
 
