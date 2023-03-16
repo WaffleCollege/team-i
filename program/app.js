@@ -3,11 +3,12 @@ require("dotenv").config({ debug: true });
 const bodyParser = require('body-parser');
 const path = require('path');
 let app = express();
-const pg = require("pg");
+const {Client} = require("pg");
 
 //const auth = require("./firebase");
 
 const firebase = require('firebase/compat/app');
+//const { cli } = require("webpack");
 require('firebase/compat/auth');
 
 const firebaseConfig = {
@@ -35,13 +36,21 @@ if (typeof process.env.API_KEY === "undefined") {
 }
 
 
-var pool = new pg.Pool({
+var client = new Client({
   database: process.env.PG_DATABASE,
   user: process.env.PG_USER,
   password: process.env.PG_PASSWORD,
   host: process.env.PG_HOST,
   port: process.env.PG_PORT
 })
+
+client.connect((err)=>{
+	if(err){
+		console.log("error connecting" + err.stack);
+		return;
+	}
+	console.log("success");
+})	
 
 
 app.use(express.static("public"));
@@ -73,10 +82,10 @@ app.post("/signup", async(req, res) => {
 
   try {
 
-    const client = await pool.connect();
-    await client.query ("SELECT * FROM public.users");
-    //await client.query ("INSERT INTO public.users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
-    client.release();
+    //const client = await pool.connect();
+    //await client.query ("SELECT * FROM public.users");
+    await client.query ("INSERT INTO public.users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
+    await client.release();
 
 
     console.log("post動いてる？")
@@ -106,15 +115,15 @@ app.get("/login", async(req, res) => {
 
   try {
 
-    const client = await pool.connect();
+    //const client = await pool.connect();
     // await client.query ("SELECT * FROM public.users");
     //await client.query ("INSERT INTO public.users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
-    client.release();
+    //client.release();
 
 
     console.log("login動いてる？")
     const redirectpage = 'main2.html';
-    res.redirect('../mainpage/' + redirectpage);
+    res.redirect('/mainpage/' + redirectpage);
   } catch (err) {
     console.log(err);
     res.status(500).send("データベースエラーが発生しました");
@@ -123,7 +132,7 @@ app.get("/login", async(req, res) => {
 
 
 
-pool.connect();
+//pool.connect();
 
 app.listen(8080, () => {
     console.log("Start Server!");
