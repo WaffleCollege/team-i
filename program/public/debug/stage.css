@@ -25,6 +25,11 @@ h3{
     line-height: 28px;
 }
 
+#inner-p{
+    font-size: 18px;
+    text-decoration: underline;
+}
+
 /*アコーディオン*/
 .accordion{
     margin: 20px 5% 20px 0;
@@ -114,13 +119,24 @@ a:hover{
     position: relative;
     height: 100%;
     opacity: 0.5;
+}
 
+.glitch-button{
+    width: 50%;
+    margin-left: 20px;
+}
+
+.glitch-button h5{
+    color:#7C73E6;
+    font-size: 40px;
+    margin:15% 5px;
 }
 
 /*stage4の雪だるま*/
 #snowman{
     width: 60%;
     margin-left: 100px;
+    border: none;
 }
 
 /*stage5カルーセル文字*/
