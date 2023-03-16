@@ -74,19 +74,51 @@ app.post("/signup", async(req, res) => {
   try {
 
     const client = await pool.connect();
-    await client.query ("INSERT INTO public.users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
+    await client.query ("SELECT * FROM public.users");
+    //await client.query ("INSERT INTO public.users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
     client.release();
 
 
     console.log("post動いてる？")
     const redirectpage = 'main2.html';
-    res.redirect('/public/mainpage/' + redirectpage);
+    res.redirect('/mainpage/' + redirectpage);
   } catch (err) {
     console.log(err);
     res.status(500).send("データベースエラーが発生しました");
   }
 
 
+})
+
+app.get("/login", async(req, res) => {
+  const catchloginEmail = req.body.email;
+  const catchloginPassword = req.body.password;
+
+  const firebaseLogin = firebase.auth().signInWithEmailAndPassword(catchloginEmail, catchloginPassword)
+      .catch(function(error) {
+        console.log('ログインできません（' + error.message + '）');
+      });
+
+  const getloginEmail = firebaseLogin.user.email;
+  const getloginId = firebaseLogin.user.uid;
+
+  console.log(getloginEmail, getloginId);
+
+  try {
+
+    const client = await pool.connect();
+    // await client.query ("SELECT * FROM public.users");
+    //await client.query ("INSERT INTO public.users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
+    client.release();
+
+
+    console.log("login動いてる？")
+    const redirectpage = 'main2.html';
+    res.redirect('../mainpage/' + redirectpage);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("データベースエラーが発生しました");
+  }
 })
 
 
