@@ -1,47 +1,36 @@
 //signup
-export async function createAccount() {
+function createAccount() {
     var mailAddress = document.getElementById('mailAddress').value;
     var password = document.getElementById('password').value;
     console.log ("動いてる");
     console.log (mailAddress, password);
 
-    //console.log(createUserWithEmailAndPassword);
-  
-  
-    const firebaseResult = await createUserWithEmailAndPassword(mailAddress, password)
-      .catch(function(error) {
-        alert('ログインできません（' + error.message + '）');
-      });
-      console.log(firebaseResult);
+    const sendUserData = {
+      email: mailAddress,
+      password: password
+    }
 
-      
-      if(firebaseResult && firebaseResult.user) {
-        const userData = firebaseResult.user;
-        const signupData = {
-          userName: userData.displayName,
-          email: userData.email,
-          userId: userData.uid
-        }
+    fetch ('/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(sendUserData)
+    })
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.log(err);
+    });
 
-        fetch ('/signup', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(signupData)
-        })
-        .then(res => {
-          console.log(res);
-        })
-        .catch(err => {
-          console.log(err);
-        });
-      };
-      console.log(firebaseResult);
-  }
+    console.log(sendUserData);
+
+  };
+
+
   
-  
-  document.getElementById("register").addEventListener("click", createAccount);
+document.getElementById("register").addEventListener("click", createAccount);
   
   
   //login
