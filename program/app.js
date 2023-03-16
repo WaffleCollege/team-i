@@ -65,39 +65,55 @@ app.get("/", (req, res) => {
 
 app.post("/signup", async(req, res) => {
 
-  const catchEmail = req.body.email;
-  const catchPassword = req.body.password;
+  // const catchEmail = req.body.email;
+  // const catchPassword = req.body.password;
 
-  const firebaseResult = await firebase.auth().createUserWithEmailAndPassword(catchEmail, catchPassword)
-      .catch(function(error) {
-        console.log('ログインできません（' + error.message + '）');
-      });
-  //console.log(firebaseResult);
+  // const firebaseResult = await firebase.auth().createUserWithEmailAndPassword(catchEmail, catchPassword)
+  //     .catch(function(error) {
+  //       console.log('ログインできません（' + error.message + '）');
+  //     });
+  // console.log(firebaseResult);
 
-  const getuserEmail = firebaseResult.user.email;
-  const getuserName = getuserEmail.slice(0, getuserEmail.indexOf('@'));;
-  const getuserID = firebaseResult.user.uid;
+  // const getuserEmail = firebaseResult.user.email;
+  // const getuserName = getuserEmail.slice(0, getuserEmail.indexOf('@'));;
+  // const getuserID = firebaseResult.user.uid;
 
-  console.log(getuserEmail, getuserName, getuserID);
+  //console.log(getuserEmail, getuserName, getuserID);
 
   try {
 
     //const client = await pool.connect();
-    //await client.query ("SELECT * FROM public.users");
-    await client.query ("INSERT INTO public.users (user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
-    await client.release();
+    // const user = await client.query ("SELECT * FROM public.users");
+    // console.log(user)
+    // await client.query ("INSERT INTO public.users ( user_name, email, firebase_id) VALUES ($1, $2, $3)", [getuserName, getuserEmail, getuserID]);
+    // //await client.release();
 
 
     console.log("post動いてる？")
     const redirectpage = 'main2.html';
-    res.redirect('/mainpage/' + redirectpage);
+    if (res.headersSent) {
+      console.log('レスポンスのヘッダーはすでに送信済み');
+      res.status(500).send('Internal Server Error');
+    } else {
+      //res.redirect('/mainpage/' + redirectpage);
+      //res.sendFile(path.join(__dirname, 'public', 'mainpage', 'main2.html'));
+      console.log(redirectpage);
+      res.redirect('http://localhost:8080/mainpage/main2.html');
+    }
+
   } catch (err) {
     console.log(err);
-    res.status(500).send("データベースエラーが発生しました");
+    res.status(500).send(err);
+    
   }
 
 
 })
+
+// app.get("/mainpage/main2.html", async(req, res) => {
+//   res.sendFile(path.join(__dirname, 'public', 'mainpage', 'main2.html'));
+// });
+
 
 app.get("/login", async(req, res) => {
   const catchloginEmail = req.body.email;
