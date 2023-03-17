@@ -34,14 +34,35 @@ document.getElementById("register").addEventListener("click", createAccount);
   
   
   //login
-  export function login(){
+function login(){
     console.log ("login");
     var mailAddress = document.getElementById('mailAddress').value;
     var password = document.getElementById('password').value;
-    firebase.auth().signInWithEmailAndPassword(mailAddress, password)
-      .catch(function(error) {
-        alert('ログインできません（' + error.message + '）');
-      });
+    // firebase.auth().signInWithEmailAndPassword(mailAddress, password)
+    //   .catch(function(error) {
+    //     alert('ログインできません（' + error.message + '）');
+    //   });
+
+    const sendLoginData = {
+      email: mailAddress,
+      password: password
+    }
+
+    fetch ('/login', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(sendLoginData)
+    })
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+
+    console.log(sendLoginData);
   }
   
   document.getElementById("login").addEventListener("click", login);
