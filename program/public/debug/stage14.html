@@ -45,7 +45,7 @@
           </div>
 
     </header>
-    <h1>文字の大きさのデバッグ</h1>
+    <h1>ボーダーのデバッグ</h1>
     <div class="main-container">
         <div class="flow">
             <div class="flow-text">
@@ -70,7 +70,9 @@
                         <ul>
                           <li>デバッグ前の画像とデバッグ後の画像で変わっているところは？</li>
                           <li>変わっているところは、どう変化すればいい？</li>
-                          <li>デバッグしたい箇所のHTMLからみていこう。何かヒントはないかな？</li>
+                          <li>デバッグしたい箇所のHTMLからみていこう。どこのクラス名が関係してくるかな？</li>
+                          <li>文字の下線は、HTMLとCSSどちらで指定しよう？</li>
+                          <li>下線の引き方のコードがわからなかったら、ネット上で<bold>「CSS 文字下線」</bold>で検索してみよう！</li>
                         </ul>
                     </div>
                   </div>
@@ -83,6 +85,9 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
+                        <p>今回は、「おまけ：ゆきだるまの趣味」の下に白い下線がひかれているね。
+                          これは、HTMlをみると、クラス名<code>hoby-title</code>、タグ名<code>h2</code>が対応していることがわかる。
+                        文字の下線部は、CSSにて、<code>text-decoration: underline;</code>で指定できるため、<code>.hoby-title h2</code>の部分にそのコードを書き加えよう。</p>
                         <p>
                           コードを大画面でみる場合、右上の「EDIT ON CODEPEN」をクリック。<br>
                           本画面で原寸大でみる場合、倍率「0.25×」をクリック。</p>
