@@ -43,7 +43,7 @@
           </div>
 
     </header>
-    <h1>文字の大きさのデバッグ</h1>
+    <h1>文字のカラーのデバッグ</h1>
     <div class="main-container">
         <div class="flow">
             <div class="flow-text">
@@ -55,6 +55,7 @@
                     ④書き換えたら、「答えをみる」をタップ。<br>
                     　自分のコードと答えを照らし合わせよう。<br>
                     ⑤あっていたら、「できた！」をタップ！</p>
+                  <p>※今回の問題では、文字のカラーは「white」を指定。</p>
             </div>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
@@ -68,7 +69,9 @@
                         <ul>
                           <li>デバッグ前の画像とデバッグ後の画像で変わっているところは？</li>
                           <li>変わっているところは、どう変化すればいい？</li>
-                          <li>デバッグしたい箇所のHTMLからみていこう。何かヒントはないかな？</li>
+                          <li>デバッグしたい箇所のHTMLからみていこう。</li>
+                          <li>HTMLのクラス名を参考に、CSSの編集箇所を特定しよう。</li>
+                          <li>文字のカラーを指定するには、どんなコードがあればよいかな？</li>
                         </ul>
                     </div>
                   </div>
@@ -81,6 +84,10 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
+                        <p>「Who am I」「Keyword」の文字のカラーをwhiteに設定する必要があるよ！
+                          二つの文字のクラス名となっている「profile-info」、さらにはタグ名として今回指定されている「h2」に注目し、
+                          CSSファイル内の<code>.profile-info h2</code>を探そう。
+                          <code>.profile-info h2</code>の中に、文字のカラーを指定するコード<code>color: white;</code>を入力。文字の色が白に変わるね！</p>
                         <p>
                           コードを大画面でみる場合、右上の「EDIT ON CODEPEN」をクリック。<br>
                           本画面で原寸大でみる場合、倍率「0.25×」をクリック。</p>
