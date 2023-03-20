@@ -25,23 +25,14 @@ a {
     color: white;
 }
 
-/*モーダル*/
-.modal-content{
-    background-color: #7C73E6;
-}  
-
-.modal-title{
-    color: white;
-}
-
-.modal-body{
+/*ログイン・新規登録*/
+.form-area{
     margin: 0 auto;
     text-align: center;
 }
 
 .form{
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 5px 30%;
 }
 
 .form-control{
@@ -51,15 +42,17 @@ a {
     margin-bottom: 10px;
 }
 
-#submit-btn{
-    color:#7C73E6;
-    background-color: #bfccff;
+
+#login, #register{
+    color:white;
+    background-color: #7C73E6;
     padding: 20px 60px;
     text-align: center;
-    border-color: #bfccff;
+    border-color: #7C73E6;
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
+    border-radius: 34px;
 }  
 
 /* アプリロゴ */
