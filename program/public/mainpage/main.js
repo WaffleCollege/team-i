@@ -20,7 +20,7 @@ function createAccount() {
     .then(res => {
       console.log(res);
       console.log("res返って来ている");
-      window.location.href = 'http://localhost:8080/mainpage/main2.html';
+      //window.location.href = 'http://localhost:8080/mainpage/main2.html';
     })
     .catch(err => {
       console.log(err);

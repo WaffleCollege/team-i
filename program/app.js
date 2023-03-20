@@ -96,16 +96,7 @@ app.post("/signup", async(req, res) => {
       console.log('レスポンスのヘッダーはすでに送信済み');
       res.status(500).send('Internal Server Error');
     } else {
-      //res.redirect('/mainpage/' + redirectpage);
-      //res.sendFile(path.join(__dirname, 'public', 'mainpage', 'main2.html'));
-      const red = __dirname;
-      console.log(red);
-      console.log(redirectpage);
-      //res.redirect('http://localhost:8080/mainpage/main2.html');
-      //console.log(location.href);
-      // location.href="http://localhost:8080/mainpage/main2.html";
-      // console.log(location.href);
-      res.redirect('/');
+      res.redirect(307, '/mainpage/' + redirectpage);
     }
 
   } catch (err) {
